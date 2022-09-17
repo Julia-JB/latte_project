@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latte 🥛</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: linear-gradient(150deg, #fdfbfb 0%, #ebedee 100%);
+        border-radius: 10px;
+      }
+
+      .headings {
+        margin: 0 auto 28px;
+      }
+      .main {
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-size: 42px;
+        font-weight: 600;
+        text-align: center;
+        color: #3f66da;
+        margin-top: 24px;
+        padding-top: 44px;
+        line-height: 18px;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: bolder;
+        text-align: center;
+        color: #333333;
+        line-height: 18px;
+      }
+
+      img {
+        display: block;
+        width: 440px;
+        margin: 0 auto;
+        border-radius: 14px;
+      }
+
+      p {
+        font-size: 15px;
+        width: 440px;
+        margin: 28px auto;
+        text-align: justify;
+        text-justify: distribute;
+        color: #333333;
+      }
+
+      a {
+        color: #3f66da;
+      }
+      .ingr {
+        color: #3f66da;
+      }
+
+      button {
+        display: block;
+        margin: 42px auto 48px;
+        border: 1px solid #3f66da;
+        background: #3f66da;
+        color: #fff;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: bolder;
+        line-height: 20px;
+        padding: 16px 28px;
+        border-radius: 34px;
+        transition: all 200ms ease-in-out;
+        box-shadow: rgba(37, 39, 89, 0.07) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #fcfafb;
+        color: #3f66da;
+        border: 1px solid #3f66da;
+      }
+      hr {
+        border-top: 1px solid;
+        width: 360px;
+        color: #333333;
+        opacity: 0.2;
+      }
+      .author {
+        text-align: center;
+        font-size: 13px;
+        font-weight: bolder;
+        opacity: 0.3;
+        margin: 16px auto;
+        padding-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="headings">
+        <h1>Caffe Latte</h1>
+        <h2>Iced Latte Summer Drink</h2>
+      </section>
+      <section class="main">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/042/293/original/Cold-coffee-in-a-tall-glass-500x500.jpg?1659297047"
+          alt="two glasses of iced latte"
+        />
+        <p>
+          Caffè latte, often shortened to just latte in English, is a coffee
+          beverage of Italian origin made with
+          <span class="ingr"><strong>espresso</strong></span> and steamed
+          <span class="ingr"><strong>milk</strong></span
+          >. Variants include the chocolate-flavored mocha or replacing the
+          coffee with another beverage base such as masala chai (spiced Indian
+          tea), mate, matcha, turmeric, or rooibos.
+          <br />
+          The term comes from the Italian
+          <strong>caffellatte</strong> or caffè latte, from
+          <em>caffè e latte</em>, literally "coffee and milk".
+          <strong>Iced latte</strong> is usually espresso and chilled milk
+          poured over ice.
+          <br />
+          <a href="https://en.wikipedia.org/wiki/Latte" target="_blank">
+            Read more on Wikipedia
+          </a>
+        </p>
+        <button>👉 Try Latte 🥛</button>
+        <hr />
+        <p class="author">Made by Julia Batsheva</p>
+      </section>
+    </div>
+    <script>
+      function yourLatte() {
+        let heading = document.querySelector("h1");
+        let name = prompt("What is your name?");
+        if (name.length === 0) {
+          alert("Hey mysterious stranger, your latte is on the way!");
+        } else {
+          alert(`Hey ${name}, your latte is on the way!`);
+        }
+      }
+      let latteButton = document.querySelector("button");
+      latteButton.addEventListener("click", yourLatte);
+    </script>
+  </body>
+</html>
